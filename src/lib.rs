@@ -1,13 +1,13 @@
 pub trait Orderable {
-    fn order(&self) -> u64;
+    fn get_order(&self) -> u64;
     fn cmp_order(&self, other: &Self) -> std::cmp::Ordering {
-        self.order().cmp(&other.order())
+        self.get_order().cmp(&other.get_order())
     }
 }
 
 pub trait BigOrderable {
-    fn order(&self) -> u128;
+    fn get_order(&self) -> u128;
     fn cmp_order(&self, other: &Self) -> std::cmp::Ordering {
-        self.order().cmp(&other.order())
+        self.get_order().cmp(&other.get_order())
     }
 }
